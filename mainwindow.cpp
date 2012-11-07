@@ -4,8 +4,8 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 
-#include <qwt/qwt_plot_magnifier.h>
-#include <qwt/qwt_plot_panner.h>
+#include <qwt_plot_magnifier.h>
+#include <qwt_plot_panner.h>
 
 MainWindow::MainWindow(QWidget *parent) :
     QWidget(parent),
@@ -87,8 +87,8 @@ void MainWindow::refresh()
             y_sm[i]= y_sm[i-1] + m_alpha*(y[i]-y_sm[i-1]);
         x[i] = i;
     }
-    _curve->setData(x,y,DATA_SIZE);
-    _curve_sm->setData(x,y_sm,DATA_SIZE);
+    _curve->setSamples(x,y,DATA_SIZE);
+    _curve_sm->setSamples(x,y_sm,DATA_SIZE);
     plot->replot();
 
 }
@@ -108,6 +108,6 @@ void MainWindow::setAlpha(double value)
     {
         y_sm[i]= y_sm[i-1] + m_alpha*(y[i]-y_sm[i-1]);
     }
-    _curve_sm->setData(x,y_sm,DATA_SIZE);
+    _curve_sm->setSamples(x,y_sm,DATA_SIZE);
     plot->replot();
 }

@@ -1,17 +1,17 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <qwt/qwt_scale_map.h>
-#include <qwt/qwt_plot_curve.h>
-#include <qwt/qwt_symbol.h>
-#include <qwt/qwt_math.h>
+#include <qwt_scale_map.h>
+#include <qwt_plot_curve.h>
+#include <qwt_symbol.h>
+#include <qwt_math.h>
 #include <qcolor.h>
 #include <qpainter.h>
 
 #include <QMainWindow>
 #include <QPushButton>
-#include <qwt/qwt_plot_curve.h>
-#include <qwt/qwt_plot.h>
+#include <qwt_plot_curve.h>
+#include <qwt_plot.h>
 #include <QDial>
 #include <QAbstractSlider>
 #include <QDoubleSpinBox>
